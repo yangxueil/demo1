@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .out {
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .out > div {
+            width: 150px;
+            height: 150px;
+            float: left;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .out > div > img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    </style>
+</head>
+<body>
+<div class="out" id="accordion">
+    <div><img src="images/image1.jpg"/></div>
+    <div><img src="images/image2.jpg"/></div>
+    <div><img src="images/image3.jpg"/></div>
+    <div><img src="images/image4.jpg"/></div>
+    <div><img src="images/image5.jpg"/></div>
+    <div>
+        <img src="images/image6.jpg"/>
+    </div>
+    <div><img src="images/image7.jpg"/></div>
+    <div><img src="images/image8.jpg"/></div>
+    <div>
+        <img src="images/image9.jpg"/>
+    </div>
+    <div><img src="images/image10.jpg"/></div>
+    <div><img src="images/image11.jpg"/></div>
+    <div><img src="images/image12.jpg"/></div>
+    <div><img src="images/image13.jpg"/></div>
+    <div><img src="images/image14.jpg"/></div>
+    <div><img src="images/image15.jpg"/></div>
+    <div><img src="images/image16.jpg"/></div>
+    <div><img src="images/image17.jpg"/></div>
+    <div><img src="images/image12.jpg"/></div>
+    <div><img src="images/image9.jpg"/></div>
+    <div><img src="images/image20.jpg"/></div>
+</div>
+<script src="script.js"></script>
+<script>
+    //供用户修改的信息
+    var user_option = {
+        col: 4,
+        row: 5
+    };
+    //'accordion'调用方法传参要加''
+    accordion('accordion', user_option);
+</script>
+</body>
+</html>
